@@ -173,10 +173,50 @@ form input, form textarea {
 
 /* Rodapé */
 footer {
-    text-align: center;
-    padding: 1.5rem;
     background-color: var(--primary-color);
     color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.footer-logo {
+    width: 100px; /* Ajuste o tamanho do logo se precisar */
+    margin-bottom: 1rem;
+}
+
+.social-media {
+    text-align: right;
+}
+
+.social-icon {
+    width: 30px; /* Tamanho dos ícones */
+    height: 30px;
+    filter: invert(1); /* Deixa o ícone branco */
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Responsividade */
@@ -189,5 +229,12 @@ footer {
     }
     .imovel-card, .blog-post {
         width: 100%;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-info, .social-media {
+        text-align: center;
     }
 }
