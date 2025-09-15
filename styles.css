@@ -1,5 +1,5 @@
 /* Importação de fonte moderna */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap' );
 
 /* Definições Gerais */
 body {
@@ -53,21 +53,14 @@ section {
     text-align: center;
 }
 
+/* MELHORIA: Aponta para a imagem local heroi.jpg */
 #hero {
-    /* Substituímos o caminho local por uma URL completa */
-    background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1770' );
+    background-image: url('heroi.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     padding: 10rem 2rem;
-}
-
-/* Elementos Visuais e Imagens */
-#hero img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Botões */
@@ -199,7 +192,7 @@ footer {
 }
 
 .footer-logo {
-    width: 100px; /* Ajuste o tamanho do logo se precisar */
+    width: 100px;
     margin-bottom: 1rem;
 }
 
@@ -208,9 +201,9 @@ footer {
 }
 
 .social-icon {
-    width: 30px; /* Tamanho dos ícones */
+    width: 30px;
     height: 30px;
-    filter: invert(1); /* Deixa o ícone branco */
+    filter: invert(1);
     transition: transform 0.3s;
 }
 
@@ -243,27 +236,51 @@ footer {
         text-align: center;
     }
 }
-/* ... (todo o seu CSS anterior ) ... */
 
-/* ESTILO PARA O MAPA CLICÁVEL NO RODAPÉ */
+/* MELHORIA: Estilo para o mapa clicável no rodapé */
 .map-wrapper {
-    position: relative; /* Essencial para o truque funcionar */
+    position: relative;
     border-radius: 8px;
-    overflow: hidden; /* Garante que o iframe respeite a borda arredondada */
-    margin-bottom: 1rem; /* Espaço abaixo do mapa */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    overflow: hidden;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .map-wrapper a {
-    position: absolute; /* Coloca o link sobre o iframe */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Garante que o link fique na frente */
-    background-color: rgba(0,0,0,0); /* Totalmente transparente */
+    z-index: 1;
 }
 
 .map-wrapper iframe {
-    display: block; /* Remove espaços extras abaixo do iframe */
+    display: block;
+}
+
+/* MELHORIA: Estilo do botão flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 36px;
+    margin-top: 12px;
 }
