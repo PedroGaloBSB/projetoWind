@@ -1,0 +1,118 @@
+/* Definições Gerais */
+body {
+    font-family: Arial, sans-serif; /* Mude para a fonte da sua escolha */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* Cor do texto */
+}
+
+/* Paleta de Cores */
+:root {
+    --primary-color: #2c3e50; /* Azul escuro - para títulos e botões */
+    --secondary-color: #3498db; /* Azul claro - para detalhes */
+    --light-color: #ecf0f1; /* Cinza claro - para fundos */
+    --text-color: #2c3e50; /* Cor do texto */
+}
+
+/* Estilo do Cabeçalho e Navegação */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Estilo para Seções */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#hero {
+    background-color: var(--light-color);
+}
+
+/* Elementos Visuais e Imagens */
+#hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões */
+button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Responsividade Básica para telas menores */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav a {
+        padding: 0.5rem 0;
+    }
+}
