@@ -1,18 +1,18 @@
 /* Definições Gerais */
 body {
-    font-family: Arial, sans-serif; /* Mude para a fonte da sua escolha */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333; /* Cor do texto */
+    color: #333;
 }
 
 /* Paleta de Cores */
 :root {
-    --primary-color: #2c3e50; /* Azul escuro - para títulos e botões */
-    --secondary-color: #3498db; /* Azul claro - para detalhes */
-    --light-color: #ecf0f1; /* Cinza claro - para fundos */
-    --text-color: #2c3e50; /* Cor do texto */
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --light-color: #ecf0f1;
+    --text-color: #2c3e50;
 }
 
 /* Estilo do Cabeçalho e Navegação */
@@ -57,7 +57,7 @@ section {
 #hero img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Cantos arredondados */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -75,7 +75,26 @@ button {
 
 button:hover {
     background-color: #2980b9;
-    transform: translateY(-2px); /* Efeito de elevação */
+    transform: translateY(-2px);
+}
+
+/* Estilos de Cards (Imóveis e Blog) */
+.imovel-card, .blog-post, .testemunho {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 1rem;
+    text-align: left;
+    display: inline-block; /* Para que os cards fiquem lado a lado */
+    max-width: 450px;
+    vertical-align: top;
+}
+
+.imovel-card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
 }
 
 /* Formulário */
@@ -114,5 +133,9 @@ footer {
     }
     nav a {
         padding: 0.5rem 0;
+    }
+    .imovel-card, .blog-post, .testemunho {
+        display: block;
+        margin: 1rem auto;
     }
 }
