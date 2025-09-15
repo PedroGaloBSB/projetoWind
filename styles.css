@@ -33,6 +33,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    flex-wrap: wrap; /* Garante que o menu quebre a linha em telas pequenas */
 }
 
 nav a {
@@ -49,11 +50,10 @@ nav a:hover {
 
 /* Estilo para Seções */
 section {
-    padding: 4rem 2rem; /* Ajustei o padding para um visual mais equilibrado */
+    padding: 4rem 2rem;
     text-align: center;
 }
 
-/* CORREÇÃO: Regra #hero separada e com a URL correta */
 #hero {
     background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1770' );
     background-size: cover;
@@ -81,8 +81,8 @@ button:hover, input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-/* Estilos de Cards (Imóveis e Blog) */
-.imovel-cards-container, .blog-posts-container {
+/* Estilos de Cards (Imóveis) */
+.imovel-cards-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -90,7 +90,7 @@ button:hover, input[type="submit"]:hover {
     margin-top: 2rem;
 }
 
-.imovel-card, .blog-post {
+.imovel-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -100,14 +100,14 @@ button:hover, input[type="submit"]:hover {
     transition: transform 0.3s;
 }
 
-.imovel-card:hover, .blog-post:hover {
+.imovel-card:hover {
     transform: translateY(-10px);
 }
 
 .imovel-card img {
     width: 100%;
-    height: 200px; /* Adicionado para manter a consistência de altura */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    height: 200px;
+    object-fit: cover;
     border-radius: 4px;
     margin-bottom: 1rem;
 }
@@ -121,7 +121,7 @@ button:hover, input[type="submit"]:hover {
     position: relative;
     max-width: 600px;
     margin: 0 auto;
-    min-height: 250px; /* Usando min-height para mais flexibilidade */
+    min-height: 250px;
     overflow: hidden;
 }
 
@@ -143,7 +143,7 @@ button:hover, input[type="submit"]:hover {
 }
 
 .testemunho-item img {
-    width: 80px; /* Reduzido um pouco para um visual mais delicado */
+    width: 80px;
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
@@ -169,7 +169,7 @@ form input, form textarea {
     padding: 0.8rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    box-sizing: border-box;
 }
 
 /* Rodapé */
@@ -183,7 +183,7 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Alinha os itens ao topo */
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -192,7 +192,7 @@ footer {
 
 .footer-info {
     text-align: left;
-    flex: 2; /* Permite que esta seção ocupe mais espaço */
+    flex: 2;
     min-width: 300px;
 }
 
@@ -201,10 +201,9 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* CORREÇÃO: Estilo para a área de redes sociais */
 .social-media {
     text-align: right;
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1;
 }
 
 .social-icon {
@@ -212,7 +211,7 @@ footer {
     height: 30px;
     filter: invert(1);
     transition: transform 0.3s;
-    margin-left: 1rem; /* Adiciona espaço entre os ícones se houver mais de um */
+    margin-left: 1rem;
 }
 
 .social-icon:hover {
@@ -226,14 +225,13 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Estilo para o mapa clicável no rodapé */
 .map-wrapper {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     margin: 1rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 400px; /* Limita a largura do mapa */
+    max-width: 400px;
 }
 
 .map-wrapper a {
@@ -249,7 +247,6 @@ footer {
     display: block;
 }
 
-/* CORREÇÃO: Estilo do botão flutuante do WhatsApp */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -274,13 +271,63 @@ footer {
     margin-top: 12px;
 }
 
+/* ADICIONADO: Estilos para a nova seção de VLOG */
+.vlog-posts-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.vlog-post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 400px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.vlog-post:hover {
+    transform: translateY(-10px);
+}
+
+.vlog-post h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Responsividade */
+@media (max-width: 900px) {
+    .vlog-post {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
         gap: 0.5rem;
     }
-    .imovel-card, .blog-post {
+    .imovel-card {
         width: 100%;
     }
     .footer-content {
