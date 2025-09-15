@@ -54,7 +54,12 @@ section {
 }
 
 #hero {
-    background-color: var(--light-color);
+    background-image: url('heroi.jpg'); /* Aponta para a imagem local heroi.jpg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Muda a cor do texto para branco para ficar visível na imagem escura */
+    padding: 10rem 2rem; /* Aumenta o padding para a seção ter mais destaque */
 }
 
 /* Elementos Visuais e Imagens */
