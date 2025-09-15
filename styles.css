@@ -243,3 +243,27 @@ footer {
         text-align: center;
     }
 }
+/* ... (todo o seu CSS anterior ) ... */
+
+/* ESTILO PARA O MAPA CLICÁVEL NO RODAPÉ */
+.map-wrapper {
+    position: relative; /* Essencial para o truque funcionar */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o iframe respeite a borda arredondada */
+    margin-bottom: 1rem; /* Espaço abaixo do mapa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+}
+
+.map-wrapper a {
+    position: absolute; /* Coloca o link sobre o iframe */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Garante que o link fique na frente */
+    background-color: rgba(0,0,0,0); /* Totalmente transparente */
+}
+
+.map-wrapper iframe {
+    display: block; /* Remove espaços extras abaixo do iframe */
+}
