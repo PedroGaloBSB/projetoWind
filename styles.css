@@ -51,11 +51,9 @@ nav a:hover {
 section {
     padding: 6rem 2rem;
     text-align: center;
-}
-
-/* MELHORIA: Aponta para a imagem local heroi.jpg */
 #hero {
-    background-image: url('heroi.jpg');
+    /* Forma correta com url('...') */
+    background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1770' );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
