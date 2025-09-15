@@ -111,31 +111,43 @@
                 <button type="submit">Enviar</button>
             </form>
         </section>
-    </main>
+   <!-- ... (o resto do seu HTML continua igual até aqui) ... -->
+</main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <img src="logo.jpg" alt="Logo WM Consultoria Imobiliária" class="footer-logo">
-                
-                <!-- ADIÇÃO: O endereço agora é um link clicável para o Google Maps -->
-                <p>
-                    <a href="https://www.google.com/maps/place/Asa+Norte+Com%C3%A9rcio+Local+Norte+307+-+Asa+Norte,+Bras%C3%ADlia+-+DF,+70746-500" target="_blank" style="color: #fff; text-decoration: none;">
-                        SCLN 307, bloco E, sala 216
-                    </a>
-                </p>
-                
-                <p>Telefones: (61 ) 3522-7395 | (61) 98162-0681</p>
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <img src="logo.jpg" alt="Logo WM Consultoria Imobiliária" class="footer-logo">
+            
+            <!-- MAPA EMBUTIDO E CLICÁVEL -->
+            <div class="map-wrapper">
+                <!-- O link que cobre o mapa -->
+                <a href="https://www.google.com/maps/place/Asa+Norte+Com%C3%A9rcio+Local+Norte+307+-+Asa+Norte,+Bras%C3%ADlia+-+DF,+70746-500" target="_blank"></a>
+                <!-- O mapa que fica por baixo -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.6738270418723!2d-47.89176338069377!3d-15.76838495142583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3a4c274f217d%3A0x29625bc4112685f6!2sAsa%20Norte%20Com%C3%A9rcio%20Local%20Norte%20307%20-%20Asa%20Norte%2C%20Bras%C3%ADlia%20-%20DF%2C%2070746-500!5e0!3m2!1spt-BR!2sbr!4v1757961253098!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="200" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-            <div class="social-media">
-                <a href="https://www.instagram.com/windemberg_melo" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
-                </a>
-            </div>
+
+            <p><strong>Endereço:</strong> SCLN 307, bloco E, sala 216</p>
+            <p><strong>Telefones:</strong> (61 ) 3522-7395 | (61) 98162-0681</p>
         </div>
-        <p class="copyright">&copy; 2024 WM Consultoria Imobiliária. Todos os direitos reservados.</p>
-    </footer>
 
-    <script src="scripts.js"></script>
+        <div class="social-media">
+            <a href="https://www.instagram.com/windemberg_melo" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+    </div>
+    <p class="copyright">&copy; 2024 WM Consultoria Imobiliária. Todos os direitos reservados.</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
