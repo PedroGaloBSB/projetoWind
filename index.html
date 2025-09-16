@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<!-- Adicionamos o atributo lang para ser atualizado via JS -->
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WM Consultoria Imobiliária</title>
+    <!-- O título também será traduzido -->
+    <title data-translate-key="site_title">WM Consultoria Imobiliária</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,112 +13,110 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#sobre-nos">Sobre Nós</a></li>
-                <li><a href="#imoveis">Imóveis</a></li>
-                <li><a href="#testemunhos">Testemunhos</a></li>
-                <!-- ATUALIZADO: Link do menu aponta para #vlog -->
-                <li><a href="#vlog">VLOG</a></li>
-                <li><a href="#fale-conosco">Fale Conosco</a></li>
+                <li><a href="#sobre-nos" data-translate-key="nav_sobre">Sobre Nós</a></li>
+                <li><a href="#imoveis" data-translate-key="nav_imoveis">Imóveis</a></li>
+                <li><a href="#testemunhos" data-translate-key="nav_testemunhos">Testemunhos</a></li>
+                <li><a href="#vlog" data-translate-key="nav_vlog">VLOG</a></li>
+                <li><a href="#fale-conosco" data-translate-key="nav_fale_conosco">Fale Conosco</a></li>
             </ul>
+            <!-- SELETOR DE IDIOMA INSERIDO AQUI -->
+            <div class="language-selector">
+                <a href="javascript:void(0)" onclick="changeLanguage('pt')" class="lang-link active" id="lang-pt">PT</a>
+                <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-link" id="lang-en">EN</a>
+                <a href="javascript:void(0)" onclick="changeLanguage('es')" class="lang-link" id="lang-es">ES</a>
+            </div>
         </nav>
-        <h1>WM Consultoria Imobiliária</h1>
+        <h1 data-translate-key="header_titulo">WM Consultoria Imobiliária</h1>
     </header>
 
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h2>Venda, locação e avaliação com laudo</h2>
-                <p>Há 8 anos no mercado imobiliário</p>
-                <button>Conheça nossos serviços!</button>
+                <h2 data-translate-key="hero_titulo">Venda, locação e avaliação com laudo</h2>
+                <p data-translate-key="hero_subtitulo">Há 8 anos no mercado imobiliário</p>
+                <button data-translate-key="hero_botao">Conheça nossos serviços!</button>
             </div>
         </section>
 
         <section id="sobre-nos">
-            <h2>Sobre Nós</h2>
-            <p>A WM Consultoria Imobiliária é uma empresa especializada em venda, locação e avaliação de imóveis. Nossa missão é conectar pessoas aos seus lares e investimentos ideais, com transparência e profissionalismo. Trabalhamos para garantir que cada transação seja segura e vantajosa para todos os envolvidos.</p>
+            <h2 data-translate-key="sobre_titulo">Sobre Nós</h2>
+            <p data-translate-key="sobre_paragrafo">A WM Consultoria Imobiliária é uma empresa especializada em venda, locação e avaliação de imóveis. Nossa missão é conectar pessoas aos seus lares e investimentos ideais, com transparência e profissionalismo. Trabalhamos para garantir que cada transação seja segura e vantajosa para todos os envolvidos.</p>
             <ul>
-                <li><strong>Expertise de 8 anos no mercado.</strong></li>
-                <li><strong>Serviços especializados em venda, locação e avaliação com laudo.</strong></li>
+                <li><strong data-translate-key="sobre_li1">Expertise de 8 anos no mercado.</strong></li>
+                <li><strong data-translate-key="sobre_li2">Serviços especializados em venda, locação e avaliação com laudo.</strong></li>
             </ul>
         </section>
 
         <section id="imoveis">
-            <h2>Imóveis em Destaque</h2>
-            <p>Conheça algumas das nossas oportunidades no mercado de Brasília e região.</p>
+            <h2 data-translate-key="imoveis_titulo">Imóveis em Destaque</h2>
+            <p data-translate-key="imoveis_subtitulo">Conheça algumas das nossas oportunidades no mercado de Brasília e região.</p>
             <div class="imovel-cards-container">
                 <div class="imovel-card">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1770&auto=format&fit=crop" alt="Foto de uma casa de alto padrão.">
-                    <h3>Casa Moderna no Lago Sul</h3>
-                    <p>Casa de 4 quartos com piscina e área gourmet. Design minimalista e acabamento de alta qualidade.</p>
-                    <a href="#">Saiba mais</a>
+                    <h3 data-translate-key="imovel1_titulo">Casa Moderna no Lago Sul</h3>
+                    <p data-translate-key="imovel1_desc">Casa de 4 quartos com piscina e área gourmet. Design minimalista e acabamento de alta qualidade.</p>
+                    <a href="#" data-translate-key="imovel_botao_saiba_mais">Saiba mais</a>
                 </div>
                 <div class="imovel-card">
                     <img src="https://tse4.mm.bing.net/th/id/OIP.zrUkMJh__WUJIWhynVBy3QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Foto de um apartamento com vista panorâmica.">
-                    <h3>Apartamento no Plano Piloto</h3>
-                    <p>Apartamento de 2 quartos com vista para o parque da cidade. Ótima localização e conforto.</p>
-                    <a href="#">Saiba mais</a>
+                    <h3 data-translate-key="imovel2_titulo">Apartamento no Plano Piloto</h3>
+                    <p data-translate-key="imovel2_desc">Apartamento de 2 quartos com vista para o parque da cidade. Ótima localização e conforto.</p>
+                    <a href="#" data-translate-key="imovel_botao_saiba_mais">Saiba mais</a>
                 </div>
             </div>
         </section>
         
         <section id="testemunhos">
-            <h2>Testemunhos de Clientes</h2>
-            <p>Veja o que nossos clientes dizem sobre a nossa consultoria:</p>
+            <h2 data-translate-key="testemunhos_titulo">Testemunhos de Clientes</h2>
+            <p data-translate-key="testemunhos_subtitulo">Veja o que nossos clientes dizem sobre a nossa consultoria:</p>
             <div class="testemunho-container">
                 <div class="testemunho-item active">
                     <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1770&auto=format&fit=crop" alt="Foto de uma cliente feliz segurando uma chave.">
-                    <p>"O serviço da WM Consultoria foi impecável! Encontrei o apartamento dos meus sonhos em tempo recorde e o processo de compra foi muito fácil."</p>
-                    <p><strong>— Ana Santos</strong></p>
+                    <p data-translate-key="testemunho1_texto">"O serviço da WM Consultoria foi impecável! Encontrei o apartamento dos meus sonhos em tempo recorde e o processo de compra foi muito fácil."</p>
+                    <p><strong data-translate-key="testemunho1_autor">— Ana Santos</strong></p>
                  </div>
                 <div class="testemunho-item">
                     <img src="https://th.bing.com/th/id/OIP.86dDSTFCWETBRf7UE5qrHQHaEo?w=236&h=180&c=7&r=0&o=5&pid=1.7" alt="Foto de um cliente.">
-                    <p>"Profissionalismo, agilidade e total atenção às minhas necessidades. A avaliação do meu imóvel superou minhas expectativas."</p>
-                    <p><strong>— Carlos M. Oliveira</strong></p>
+                    <p data-translate-key="testemunho2_texto">"Profissionalismo, agilidade e total atenção às minhas necessidades. A avaliação do meu imóvel superou minhas expectativas."</p>
+                    <p><strong data-translate-key="testemunho2_autor">— Carlos M. Oliveira</strong></p>
                 </div>
             </div>
         </section>
 
-        <!-- NOVA SEÇÃO DE VLOG -->
         <section id="vlog">
-            <h2>Nosso VLOG</h2>
-            <p>Dicas, tendências e análises do mercado imobiliário em primeira mão.</p>
-            
+            <h2 data-translate-key="vlog_titulo">Nosso VLOG</h2>
+            <p data-translate-key="vlog_subtitulo">Dicas, tendências e análises do mercado imobiliário em primeira mão.</p>
             <div class="vlog-posts-container">
-                <!-- VÍDEO 1 (O seu vídeo de teste ) -->
                 <div class="vlog-post">
                     <div class="video-wrapper">
-                        <!-- Iframe que você forneceu -->
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/LhrB5sp1qnY?si=VpDCYkN9Nw-EXAch" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <h3>Tour por Apartamento de Luxo</h3>
-                    <p>Conheça em detalhes este incrível apartamento decorado, uma das joias do nosso portfólio.</p>
+                    <h3 data-translate-key="vlog1_titulo">Tour por Apartamento de Luxo</h3>
+                    <p data-translate-key="vlog1_desc">Conheça em detalhes este incrível apartamento decorado, uma das joias do nosso portfólio.</p>
                 </div>
-
-                <!-- VÍDEO 2 (Exemplo placeholder ) -->
                 <div class="vlog-post">
                     <div class="video-wrapper">
-                        <!-- Iframe de exemplo -->
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                    <h3>Financiamento Imobiliário: O que você precisa saber?</h3>
-                    <p>Tire todas as suas dúvidas sobre como financiar seu imóvel da forma mais segura e vantajosa.</p>
+                    <h3 data-translate-key="vlog2_titulo">Financiamento Imobiliário: O que você precisa saber?</h3>
+                    <p data-translate-key="vlog2_desc">Tire todas as suas dúvidas sobre como financiar seu imóvel da forma mais segura e vantajosa.</p>
                 </div>
             </div>
         </section>
 
         <section id="fale-conosco">
-            <h2>Fale Conosco</h2>
-            <p>Estamos aqui para você. Preencha o formulário abaixo e entraremos em contato.</p>
+            <h2 data-translate-key="contato_titulo">Fale Conosco</h2>
+            <p data-translate-key="contato_subtitulo">Estamos aqui para você. Preencha o formulário abaixo e entraremos em contato.</p>
             <form action="https://formspree.io/f/mrbavyke" method="POST">
-                <label for="nome">Nome:</label>
+                <label for="nome" data-translate-key="form_nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
-                <label for="email">E-mail:</label>
+                <label for="email" data-translate-key="form_email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="telefone">Telefone:</label>
+                <label for="telefone" data-translate-key="form_telefone">Telefone:</label>
                 <input type="tel" id="telefone" name="telefone">
-                <label for="mensagem">Mensagem:</label>
+                <label for="mensagem" data-translate-key="form_mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="5"></textarea>
-                <button type="submit">Enviar</button>
+                <button type="submit" data-translate-key="form_botao">Enviar</button>
             </form>
         </section>
     </main>
@@ -129,8 +129,8 @@
                     <a href="https://www.google.com/maps/place/Asa+Norte+Com%C3%A9rcio+Local+Norte+307+-+Asa+Norte,+Bras%C3%ADlia+-+DF,+70746-500" target="_blank"></a>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.6738270418723!2d-47.89176338069377!3d-15.76838495142583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3a4c274f217d%3A0x29625bc4112685f6!2sAsa%20Norte%20Com%C3%A9rcio%20Local%20Norte%20307%20-%20Asa%20Norte%2C%20Bras%C3%ADlia%20-%20DF%2C%2070746-500!5e0!3m2!1spt-BR!2sbr!4v1757961253098!5m2!1spt-BR!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <p><strong>Endereço:</strong> SCLN 307, bloco E, sala 216</p>
-                <p><strong>Contatos:</strong> 
+                <p><strong data-translate-key="footer_endereco_label">Endereço:</strong> SCLN 307, bloco E, sala 216</p>
+                <p><strong data-translate-key="footer_contatos_label">Contatos:</strong> 
                     <a href="tel:+556135227395" style="color: #fff;">(61 ) 3522-7395</a> | 
                     <a href="https://api.whatsapp.com/send/?phone=5561981620681&text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es." target="_blank" style="color: #fff;">(61 ) 98162-0681 (WhatsApp)</a>
                 </p>
@@ -141,9 +141,11 @@
                 </a>
             </div>
         </div>
-        <p class="copyright">&copy; 2024 WM Consultoria Imobiliária. Todos os direitos reservados.</p>
+        <p class="copyright" data-translate-key="footer_copyright">&copy; 2024 WM Consultoria Imobiliária. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Os scripts agora vêm no final, antes de fechar o body -->
+    <script src="translations.js"></script>
     <script src="scripts.js"></script>
 
     <a href="https://api.whatsapp.com/send/?phone=5561981620681&text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank">
