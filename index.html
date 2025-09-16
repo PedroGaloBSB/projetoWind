@@ -11,6 +11,10 @@
 <body>
 
     <header>
+    <!-- NOVO CONTAINER PRINCIPAL DO CABEÇALHO -->
+    <div class="header-container">
+        
+        <!-- CONTAINER DO MENU DE NAVEGAÇÃO -->
         <nav>
             <ul>
                 <li><a href="#sobre-nos" data-translate-key="nav_sobre">Sobre Nós</a></li>
@@ -19,15 +23,21 @@
                 <li><a href="#vlog" data-translate-key="nav_vlog">VLOG</a></li>
                 <li><a href="#fale-conosco" data-translate-key="nav_fale_conosco">Fale Conosco</a></li>
             </ul>
-            <!-- SELETOR DE IDIOMA INSERIDO AQUI -->
-            <div class="language-selector">
-                <a href="javascript:void(0)" onclick="changeLanguage('pt')" class="lang-link active" id="lang-pt">PT</a>
-                <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-link" id="lang-en">EN</a>
-                <a href="javascript:void(0)" onclick="changeLanguage('es')" class="lang-link" id="lang-es">ES</a>
-            </div>
         </nav>
-        <h1 data-translate-key="header_titulo">WM Consultoria Imobiliária</h1>
-    </header>
+
+        <!-- CONTAINER DO SELETOR DE IDIOMA (agora separado da nav) -->
+        <div class="language-selector">
+            <a href="javascript:void(0)" onclick="changeLanguage('pt')" class="lang-link active" id="lang-pt">PT</a>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-link" id="lang-en">EN</a>
+            <a href="javascript:void(0)" onclick="changeLanguage('es')" class="lang-link" id="lang-es">ES</a>
+        </div>
+
+    </div>
+
+    <!-- O Título H1 continua fora do container flex para ficar centralizado abaixo -->
+    <h1 data-translate-key="header_titulo">WM Consultoria Imobiliária</h1>
+</header>
+
 
     <main>
         <section id="hero">
