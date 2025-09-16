@@ -347,6 +347,83 @@ footer {
         bottom: 20px;
         right: 20px;
     }
+    /* --- INÍCIO DAS NOVAS REGRAS E AJUSTES --- */
+
+/* AJUSTE NO HEADER PARA USAR FLEXBOX */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    /* Aumentando o padding para dar mais espaço vertical */
+    padding: 1.5rem 2rem; 
+    text-align: center;
+}
+
+/* NOVO CONTAINER DO CABEÇALHO */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Mágica: empurra os itens para as extremidades */
+    align-items: center; /* Alinha verticalmente no centro */
+    max-width: 1200px; /* Mantém o conteúdo alinhado com o resto do site */
+    margin: 0 auto; /* Centraliza o container */
+    flex-wrap: wrap; /* Permite quebrar a linha em telas pequenas */
+}
+
+/* AJUSTE NA NAVEGAÇÃO */
+nav {
+    flex-grow: 1; /* Permite que a navegação cresça para ocupar espaço */
+}
+
+nav ul {
+    justify-content: flex-start; /* Alinha o menu à esquerda */
+    flex-wrap: wrap;
+}
+
+/* AJUSTE NO SELETOR DE IDIOMA */
+.language-selector {
+    /* Removemos a margem superior que não é mais necessária */
+    margin-top: 0; 
+    display: flex; /* Alinha os links de idioma horizontalmente */
+    gap: 0.5rem; /* Espaço entre os links PT, EN, ES */
+}
+
+.language-selector a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.language-selector a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.language-selector a.active {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* AJUSTE NO TÍTULO PRINCIPAL */
+header h1 {
+    margin-top: 1.5rem; /* Adiciona espaço acima do título */
+}
+
+
+/* AJUSTE DE RESPONSIVIDADE PARA O NOVO CABEÇALHO */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Empilha o menu e o seletor */
+        gap: 1rem; /* Espaço entre o menu e o seletor no mobile */
+    }
+    nav ul {
+        justify-content: center; /* Centraliza o menu no mobile */
+    }
+}
+
+/* --- FIM DAS NOVAS REGRAS E AJUSTES --- */
+
     .whatsapp-float img {
         width: 30px;
         margin-top: 10px;
