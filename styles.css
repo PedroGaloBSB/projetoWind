@@ -1,14 +1,10 @@
-/* Importação de fonte moderna */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap' );
+/* Importação de fonte premium */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 /* Definições Gerais */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Paleta de Cores */
 :root {
@@ -18,414 +14,200 @@ body {
     --text-color: #2c3e50;
 }
 
+/* Camada Base com Tailwind */
+body {
+    @apply font-inter text-gray-800 leading-relaxed m-0 p-0 bg-gray-100;
+}
+
 /* Estilo do Cabeçalho e Navegação */
 header {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    @apply bg-[var(--primary-color)] text-white py-6 text-center;
+}
+
+.header-container {
+    @apply flex justify-between items-center max-w-6xl mx-auto flex-wrap gap-4 px-4;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap; /* Garante que o menu quebre a linha em telas pequenas */
+    @apply flex justify-start gap-4 flex-wrap;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s;
+    @apply text-white font-semibold px-4 py-2 hover:text-[var(--secondary-color)] transition-colors duration-300;
 }
 
-nav a:hover {
-    color: var(--secondary-color);
+.language-selector {
+    @apply flex gap-2;
+}
+
+.language-selector a {
+    @apply text-white font-bold px-2 py-1 rounded border border-transparent hover:bg-white/20 transition-all duration-300;
+}
+
+.language-selector a.active {
+    @apply border-[var(--secondary-color)] text-[var(--secondary-color)];
+}
+
+header h1 {
+    @apply mt-6 text-3xl font-bold;
 }
 
 /* Estilo para Seções */
 section {
-    padding: 4rem 2rem;
-    text-align: center;
+    @apply py-16 px-4 text-center;
 }
 
 #hero {
-    background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1770' );
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    padding: 10rem 2rem;
+    @apply bg-cover bg-center bg-no-repeat text-white py-32;
+    background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1770');
 }
 
 /* Botões */
 button, input[type="submit"] {
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    @apply bg-[var(--secondary-color)] text-white py-3 px-6 rounded-full font-semibold text-base cursor-pointer hover:bg-blue-600 hover:-translate-y-0.5 transition-all duration-300;
 }
 
-button:hover, input[type="submit"]:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-}
-
-/* Estilos de Cards (Imóveis) */
+/* Estilos de Cards (Imóveis) com Carrossel */
 .imovel-cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+    @apply swiper-container flex justify-center gap-8 flex-wrap mt-8;
 }
 
 .imovel-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    width: 350px;
-    text-align: left;
-    transition: transform 0.3s;
-}
-
-.imovel-card:hover {
-    transform: translateY(-10px);
+    @apply swiper-slide bg-white rounded-lg shadow-lg p-6 w-80 text-left transition-transform duration-300 hover:scale-105;
 }
 
 .imovel-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    @apply w-full h-48 object-cover rounded mb-4;
 }
 
 /* Seção de Testemunhos */
 #testemunhos {
-    background-color: var(--light-color);
+    @apply bg-[var(--light-color)] py-16;
 }
 
 .testemunho-container {
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-    min-height: 250px;
-    overflow: hidden;
+    @apply relative max-w-xl mx-auto min-h-[250px] overflow-hidden;
 }
 
 .testemunho-item {
-    display: none;
-    text-align: center;
-    padding: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease-in-out;
+    @apply hidden text-center p-4 absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-500;
 }
 
 .testemunho-item.active {
-    display: block;
-    opacity: 1;
+    @apply block opacity-100;
 }
 
 .testemunho-item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+    @apply w-20 h-20 rounded-full object-cover mb-4;
 }
 
 /* Formulário */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 600px;
-    margin: 2rem auto 0;
+    @apply flex flex-col gap-6 max-w-xl mx-auto mt-8;
 }
 
 form label {
-    align-self: flex-start;
-    font-weight: 600;
+    @apply self-start font-semibold;
 }
 
 form input, form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    @apply w-full p-3 border border-gray-300 rounded box-border;
 }
 
 /* Rodapé */
 footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
+    @apply bg-[var(--primary-color)] text-white py-8 text-center;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 2rem;
+    @apply flex justify-between items-start max-w-6xl mx-auto flex-wrap gap-8;
 }
 
 .footer-info {
-    text-align: left;
-    flex: 2;
-    min-width: 300px;
+    @apply text-left flex-2 min-w-[300px];
 }
 
 .footer-logo {
-    width: 80px;
-    margin-bottom: 1rem;
+    @apply w-20 mb-4;
 }
 
 .social-media {
-    text-align: right;
-    flex: 1;
+    @apply text-right flex-1;
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
-    filter: invert(1);
-    transition: transform 0.3s;
-    margin-left: 1rem;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
+    @apply w-8 h-8 invert hover:scale-110 transition-transform duration-300 ml-4;
 }
 
 .copyright {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.9rem;
+    @apply mt-8 pt-4 border-t border-white/20 text-sm;
 }
 
 .map-wrapper {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
-}
-
-.map-wrapper a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.map-wrapper iframe {
-    display: block;
+    @apply relative rounded-lg overflow-hidden my-4 shadow-lg max-w-md;
 }
 
 .whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-    z-index: 100;
-    transition: transform 0.3s;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
+    @apply fixed w-16 h-16 bottom-10 right-10 bg-green-500 text-white rounded-full shadow-lg z-50 hover:scale-110 transition-transform duration-300;
 }
 
 .whatsapp-float img {
-    width: 36px;
-    margin-top: 12px;
+    @apply w-9 mt-3;
 }
 
-/* ADICIONADO: Estilos para a nova seção de VLOG */
+/* VLOG */
 .vlog-posts-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+    @apply flex justify-center gap-8 flex-wrap mt-8;
 }
 
 .vlog-post {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    width: 400px;
-    text-align: left;
-    transition: transform 0.3s;
-}
-
-.vlog-post:hover {
-    transform: translateY(-10px);
+    @apply bg-white rounded-lg shadow-lg p-6 w-96 text-left transition-transform duration-300 hover:scale-105;
 }
 
 .vlog-post h3 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    @apply mt-4 text-lg font-semibold;
 }
 
 .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 4px;
+    @apply relative pt-[56.25%] overflow-hidden rounded;
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    @apply absolute top-0 left-0 w-full h-full;
 }
 
 /* Responsividade */
 @media (max-width: 900px) {
     .vlog-post {
-        width: 100%;
-        max-width: 500px;
+        @apply w-full max-w-md;
     }
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        gap: 0.5rem;
-    }
-    .imovel-card {
-        width: 100%;
-    }
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-    .footer-info, .social-media {
-        text-align: center;
-    }
-    .social-media {
-        margin-top: 1rem;
-    }
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
-    /* --- INÍCIO DAS NOVAS REGRAS E AJUSTES --- */
-
-/* AJUSTE NO HEADER PARA USAR FLEXBOX */
-header {
-    background-color: var(--primary-color);
-    color: #fff;
-    /* Aumentando o padding para dar mais espaço vertical */
-    padding: 1.5rem 2rem; 
-    text-align: center;
-}
-
-/* NOVO CONTAINER DO CABEÇALHO */
-.header-container {
-    display: flex;
-    justify-content: space-between; /* Mágica: empurra os itens para as extremidades */
-    align-items: center; /* Alinha verticalmente no centro */
-    max-width: 1200px; /* Mantém o conteúdo alinhado com o resto do site */
-    margin: 0 auto; /* Centraliza o container */
-    flex-wrap: wrap; /* Permite quebrar a linha em telas pequenas */
-}
-
-/* AJUSTE NA NAVEGAÇÃO */
-nav {
-    flex-grow: 1; /* Permite que a navegação cresça para ocupar espaço */
-}
-
-nav ul {
-    justify-content: flex-start; /* Alinha o menu à esquerda */
-    flex-wrap: wrap;
-}
-
-/* AJUSTE NO SELETOR DE IDIOMA */
-.language-selector {
-    /* Removemos a margem superior que não é mais necessária */
-    margin-top: 0; 
-    display: flex; /* Alinha os links de idioma horizontalmente */
-    gap: 0.5rem; /* Espaço entre os links PT, EN, ES */
-}
-
-.language-selector a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.3rem 0.6rem;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    transition: all 0.3s;
-}
-
-.language-selector a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.language-selector a.active {
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
-}
-
-/* AJUSTE NO TÍTULO PRINCIPAL */
-header h1 {
-    margin-top: 1.5rem; /* Adiciona espaço acima do título */
-}
-
-
-/* AJUSTE DE RESPONSIVIDADE PARA O NOVO CABEÇALHO */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; /* Empilha o menu e o seletor */
-        gap: 1rem; /* Espaço entre o menu e o seletor no mobile */
+        @apply flex-col gap-4;
     }
     nav ul {
-        justify-content: center; /* Centraliza o menu no mobile */
+        @apply justify-center gap-2;
+    }
+    .imovel-card {
+        @apply w-full;
+    }
+    .footer-content {
+        @apply flex-col items-center text-center;
+    }
+    .social-media {
+        @apply mt-4;
+    }
+    .whatsapp-float {
+        @apply w-12 h-12 bottom-5 right-5;
+    }
+    .whatsapp-float img {
+        @apply w-7 mt-2.5;
     }
 }
 
-/* --- FIM DAS NOVAS REGRAS E AJUSTES --- */
-
-    .whatsapp-float img {
-        width: 30px;
-        margin-top: 10px;
-    }
+/* Swiper Custom Styles */
+.swiper-button-next, .swiper-button-prev {
+    @apply text-[var(--secondary-color)] hover:text-blue-600;
 }
