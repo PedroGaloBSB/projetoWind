@@ -80,24 +80,24 @@ button, input[type="submit"] {
     @apply w-full h-48 object-cover rounded mb-4;
 }
 
-/* Seção de Testemunhos */
-#testemunhos {
+/* Seção de Depoimentos */
+#depoimentos {
     @apply bg-[var(--light-color)] py-16;
 }
 
-.testemunho-container {
+.depoimentos-container {
     @apply relative max-w-xl mx-auto min-h-[250px] overflow-hidden;
 }
 
-.testemunho-item {
+.depoimentos-item {
     @apply hidden text-center p-4 absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-500;
 }
 
-.testemunho-item.active {
+.depoimentos-item.active {
     @apply block opacity-100;
 }
 
-.testemunho-item img {
+.depoimentos-item img {
     @apply w-20 h-20 rounded-full object-cover mb-4;
 }
 
