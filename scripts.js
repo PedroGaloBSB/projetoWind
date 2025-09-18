@@ -1,7 +1,7 @@
 // Função que é executada quando o conteúdo da página é totalmente carregado
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- CÓDIGO DO CARROSSEL DE TESTEMUNHOS (JÁ EXISTENTE) ---
+    // --- CÓDIGO DO CARROSSEL DE DEPOIMENTOS (JÁ EXISTENTE) ---
     const depoimentos = document.querySelectorAll('.depoimentos-item');
     let currentIndex = 0;
 
