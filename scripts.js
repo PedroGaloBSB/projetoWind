@@ -2,11 +2,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- CÓDIGO DO CARROSSEL DE TESTEMUNHOS (JÁ EXISTENTE) ---
-    const testemunhos = document.querySelectorAll('.testemunho-item');
+    const depoimentos = document.querySelectorAll('.depoimentos-item');
     let currentIndex = 0;
 
-    function showTestemunho(index) {
-        testemunhos.forEach((item, i) => {
+    function showDepoimentos(index) {
+        depoimentos.forEach((item, i) => {
             item.classList.remove('active');
             if (i === index) {
                 item.classList.add('active');
@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function nextTestemunho() {
-        currentIndex = (currentIndex + 1) % testemunhos.length;
-        showTestemunho(currentIndex);
+    function nextDepoimentos() {
+        currentIndex = (currentIndex + 1) % depoimentos.length;
+        showDepoimentos(currentIndex);
     }
 
-    if (testemunhos.length > 1) {
-        setInterval(nextTestemunho, 5000); // Muda a cada 5 segundos
+    if (depoimentos.length > 1) {
+        setInterval(nextdepoimentos, 5000); // Muda a cada 5 segundos
     }
 
     // --- NOVO CÓDIGO PARA TRADUÇÃO ---
