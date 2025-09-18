@@ -76,3 +76,19 @@ function updateActiveLanguageLink(lang) {
         activeLink.classList.add('active');
     }
 }
+
+// Inicializar Swiper para .imovel-cards-container
+const swiper = new Swiper('.imovel-cards-container', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+    },
+});
