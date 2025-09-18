@@ -57,24 +57,28 @@
             </ul>
         </section>
 
-        <section id="imoveis">
-            <h2 data-translate-key="imoveis_titulo">Imóveis em Destaque</h2>
-            <p data-translate-key="imoveis_subtitulo">Conheça algumas das nossas oportunidades no mercado de Brasília e região.</p>
-            <div class="imovel-cards-container">
-                <div class="imovel-card">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1770&auto=format&fit=crop" alt="Foto de uma casa de alto padrão.">
-                    <h3 data-translate-key="imovel1_titulo">Casa Moderna no Lago Sul</h3>
-                    <p data-translate-key="imovel1_desc">Casa de 4 quartos com piscina e área gourmet. Design minimalista e acabamento de alta qualidade.</p>
-                    <a href="#" data-translate-key="imovel_botao_saiba_mais">Saiba mais</a>
-                </div>
-                <div class="imovel-card">
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.zrUkMJh__WUJIWhynVBy3QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Foto de um apartamento com vista panorâmica.">
-                    <h3 data-translate-key="imovel2_titulo">Apartamento no Plano Piloto</h3>
-                    <p data-translate-key="imovel2_desc">Apartamento de 2 quartos com vista para o parque da cidade. Ótima localização e conforto.</p>
-                    <a href="#" data-translate-key="imovel_botao_saiba_mais">Saiba mais</a>
-                </div>
+       <section id="imoveis">
+    <h2 data-translate-key="imoveis_titulo">Imóveis em Destaque</h2>
+    <p data-translate-key="imoveis_subtitulo">Conheça algumas das nossas oportunidades no mercado de Brasília e região.</p>
+    <div class="imovel-cards-container swiper-container">
+        <div class="swiper-wrapper">
+            <div class="imovel-card swiper-slide">
+                <img src="casa-lago-sul.webp" loading="lazy" alt="Foto de uma casa de alto padrão.">
+                <h3 data-translate-key="imovel1_titulo">Casa Moderna no Lago Sul</h3>
+                <p data-translate-key="imovel1_desc">Casa de 4 quartos com piscina e área gourmet. Design minimalista e acabamento de alta qualidade.</p>
+                <a href="#" onclick="openModal('casa1')" data-translate-key="imovel_botao_saiba_mais">Saiba mais</a>
             </div>
-        </section>
+            <div class="imovel-card swiper-slide">
+                <img src="apartamento-plano-piloto.webp" loading="lazy" alt="Foto de um apartamento com vista panorâmica.">
+                <h3 data-translate-key="imovel2_titulo">Apartamento no Plano Piloto</h3>
+                <p data-translate-key="imovel2_desc">Apartamento de 2 quartos com vista para o parque da cidade. Ótima localização e conforto.</p>
+                <a href="#" onclick="openModal('apartamento1')" data-translate-key="imovel_botao_saiba_mais">Saiba mais</a>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
         
         <section id="testemunhos">
             <h2 data-translate-key="depoimentos_titulo">Depoimentos de Clientes</h2>
